@@ -36,8 +36,6 @@ func main() {
 	e.POST("/login", func(c echo.Context) error {
 		email := c.FormValue("email")
 		password := c.FormValue("password")
-		fmt.Println("email:", email)
-		fmt.Println("password:", password)
 
 		if !page.Data.UserExists(email) {
 			loginForm := views.LoginForm(page)
